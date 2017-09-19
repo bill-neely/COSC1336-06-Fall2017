@@ -6,6 +6,7 @@ public class PalindromeExercise {
 		System.out.println(reversed("This This").equals("sihT sihT"));
 		System.out.println(isPalindrome("racecar") == true);
 		System.out.println(isPalindrome("Was it a CAR or a CAT I saw") == true);
+		System.out.println(isPalindrome("Java") == false);
 	}
 
 	private static String stripBlanks(String phrase) {
@@ -20,9 +21,13 @@ public class PalindromeExercise {
 		return preppedString.toLowerCase();
 	}
 
-	private static Object reversed(String string) {
-		// TODO Auto-generated method stub
-		return null;
+	private static String reversed(String phrase) {
+		String newString = "";
+		for (int i=phrase.length() - 1; i >= 0; i--) {
+			// If the character is not blank, add it to preppedString
+				newString = newString + phrase.charAt(i);
+		}
+		return newString;
 	}
 
 	private static boolean isPalindrome(String phrase) {
@@ -31,18 +36,5 @@ public class PalindromeExercise {
 		// compare phrase to reversed phrase
 		return testPhrase.equals(reversed(testPhrase));
 	}
-
-	private static String prepareString(String phrase) {
-		String preppedString = "";
-		// read the string end to beginning
-		for (int i=phrase.length() - 1; i >= 0; i--) {
-			// If the character is not blank, add it to preppedString
-			if (phrase.charAt(i) != ' ') {
-				preppedString = preppedString + phrase.charAt(i);
-			}
-		}
-		return preppedString.toLowerCase();
-	}
-
 	
 }
