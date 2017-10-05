@@ -2,10 +2,10 @@
 public class DealerUI {
 
 	public static void main(String[] args) {
-		Vehicle[] myCars = listOfCars();
+		//Vehicle[] myCars = listOfCars();
 		//displayVehicles(myCars);
-		CarLot[] myLots = listOfCarLots();
-		displayCarLots(myLots);
+		//CarLot[] myLots = listOfCarLots();
+		//displayCarLots(myLots);
 	}
 
 	
@@ -27,20 +27,5 @@ public class DealerUI {
 		}
 	}
 	
-	private static CarLot[] listOfCarLots() {
-		CarLot lot1 = new CarLot("Downtown", listOfCars());
-		CarLot lot2 = new CarLot("North", listOfCars());
-		return new CarLot[] { lot1, lot2 };
-	}
-
-	private static Vehicle[] listOfCars() {
-		// TODO: Move to a repository class
-		Vehicle[] cars;
-		Vehicle car1 = new Vehicle("Honda", "Pilot", 5, 1000.30f);
-		Vehicle car2 = new Vehicle("Toyota", "Prius", 2, 5987.20f);
-		cars = new Vehicle[] {car1, car2, car1, car2};
-		return cars;
-	}
-
 }
      
