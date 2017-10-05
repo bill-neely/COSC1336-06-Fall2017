@@ -2,10 +2,12 @@
 public class DealerUI {
 
 	public static void main(String[] args) {
-		//Vehicle[] myCars = listOfCars();
-		//displayVehicles(myCars);
-		//CarLot[] myLots = listOfCarLots();
-		//displayCarLots(myLots);
+		Dealership myDealer = Repository.getDealership();
+		boolean keepGoing = true;
+		while (keepGoing) {
+			displayCarLots(myDealer.CarLots());
+			keepGoing = false;
+		}
 	}
 
 	

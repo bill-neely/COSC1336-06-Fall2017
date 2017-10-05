@@ -1,9 +1,9 @@
 
 public class Repository {
 
-	//public static Dealership getDealership() {
-	//	return new Dealership();
-	//}
+	public static Dealership getDealership() {
+		return new Dealership("NeelyCars", getListOfCarLots());
+	}
 	
 	private static CarLot[] getListOfCarLots() {
 		CarLot lot1 = new CarLot("Downtown", getListOfVehicles("Downtown"));
