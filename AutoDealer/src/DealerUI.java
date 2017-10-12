@@ -4,6 +4,7 @@ public class DealerUI {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		ShoppingCart myCart = new ShoppingCart();
 		Dealership myDealer = Repository.getDealership();
 		boolean keepGoing = true;
 		while (keepGoing) {
@@ -13,14 +14,25 @@ public class DealerUI {
 			if (!lotNumber.equals("exit")) {
 				if (validChoice(lotNumber, myDealer.CarLots().length)) {
 					int lotID = Integer.parseInt(lotNumber) - 1;
-					System.out.println("You picked lot: " + myDealer.CarLots()[lotID].location());
-					displayVehicles(myDealer.CarLots()[lotID].VehicleList());
+					CarLot chosenLot = myDealer.CarLots()[lotID];
+					System.out.println("You picked lot: " + chosenLot.location());
+					displayVehicles(chosenLot.VehicleList());
+					System.out.println("Please pick a vehicle");
+					String vehicleID = scan.nextLine();
+					if (validChoice(vehicleID, chosenLot.VehicleList().length)) {
+						System.out.println("How many do you want?");
+						String purchaseQty = scan.nextLine();
+						int vehicleNum = Integer.parseInt(vehicleID) - 1;
+						int qty = Integer.parseInt(purchaseQty);
+						myCart.addVehicle(chosenLot.VehicleList()[vehicleNum], qty);
+					}
 				}
 			}
 			else {
 				keepGoing = false;
 			}
 		}
+		System.out.println("Thank you for shopping.  Your balance is: " + myCart.BalanceDue());
 	}
 	
 	private static boolean validChoice(String lotNumber, int upperLimit) {
@@ -40,13 +52,16 @@ public class DealerUI {
 	}
 	
 	private static void displayVehicles(Vehicle[] theVehicles) {
-		System.out.println("Make\tModel\tDoors\tPrice");
-		System.out.println("----\t-----\t-----\t-----");
+		System.out.println("\tMake\tModel\tDoors\tPrice");
+		System.out.println("---\t----\t-----\t-----\t-----");
+		int i = 1;
 		for (Vehicle car : theVehicles) {
+			System.out.print(i + "\t");
 			System.out.print(car.make() + "\t");
 			System.out.print(car.model() + "\t");
 			System.out.print(car.doors() + "\t");
 			System.out.println(car.price());
+			i++;
 		}
 	}
 	

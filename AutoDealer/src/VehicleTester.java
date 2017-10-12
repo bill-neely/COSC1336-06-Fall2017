@@ -12,7 +12,6 @@ public class VehicleTester {
 		Vehicle myCar2 = myCar.clone(2);
 		System.out.println(myCar2.quantity() == 2);
 		System.out.println(myCar2.make().equals(myCar.make()));
-		// assert mycar2 (make, model, doors, price) == mycar1(make model doors price)
 	}
 
 }
