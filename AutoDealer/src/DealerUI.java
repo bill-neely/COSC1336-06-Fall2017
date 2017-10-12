@@ -13,6 +13,7 @@ public class DealerUI {
 			if (!lotNumber.equals("exit")) {
 				if (validChoice(lotNumber, myDealer.CarLots().length)) {
 					int lotID = Integer.parseInt(lotNumber) - 1;
+					System.out.println("You picked lot: " + myDealer.CarLots()[lotID].location());
 					displayVehicles(myDealer.CarLots()[lotID].VehicleList());
 				}
 			}
