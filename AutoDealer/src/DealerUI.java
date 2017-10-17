@@ -4,8 +4,11 @@ public class DealerUI {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		ShoppingCart myCart = new ShoppingCart();
 		Dealership myDealer = Repository.getDealership();
+		System.out.println("Welcome to " + myDealer.dealerName + ". What is your name?");
+		String customerName = scan.nextLine();
+		System.out.println("Hello " + customerName + ".  Enjoy your shopping experience");
+		ShoppingCart myCart = new ShoppingCart();
 		boolean keepGoing = true;
 		while (keepGoing) {
 			displayCarLots(myDealer.CarLots());
@@ -24,7 +27,10 @@ public class DealerUI {
 						String purchaseQty = scan.nextLine();
 						int vehicleNum = Integer.parseInt(vehicleID) - 1;
 						int qty = Integer.parseInt(purchaseQty);
-						myCart.addVehicle(chosenLot.VehicleList()[vehicleNum], qty);
+						// If here to check Vehicle quantity is availble
+						if (!myCart.addVehicle(chosenLot.VehicleList()[vehicleNum], qty)) {
+							System.out.println("I'm sorry, we don't have that many.");
+						}
 					}
 				}
 			}
@@ -32,7 +38,8 @@ public class DealerUI {
 				keepGoing = false;
 			}
 		}
-		System.out.println("Thank you for shopping.  Your balance is: " + myCart.BalanceDue());
+		System.out.println("Your balance is: " + myCart.BalanceDue());
+		System.out.println("Thank for shopping, " + customerName + ". Please come again.");
 	}
 	
 	private static boolean validChoice(String lotNumber, int upperLimit) {
@@ -52,15 +59,16 @@ public class DealerUI {
 	}
 	
 	private static void displayVehicles(Vehicle[] theVehicles) {
-		System.out.println("\tMake\tModel\tDoors\tPrice");
-		System.out.println("---\t----\t-----\t-----\t-----");
+		System.out.println("\tMake\tModel\tDoors\tPrice\tQty");
+		System.out.println("---\t----\t-----\t-----\t-----\t---");
 		int i = 1;
 		for (Vehicle car : theVehicles) {
 			System.out.print(i + "\t");
 			System.out.print(car.make() + "\t");
 			System.out.print(car.model() + "\t");
 			System.out.print(car.doors() + "\t");
-			System.out.println(car.price());
+			System.out.print(car.price() + "\t");
+			System.out.println(car.quantity());
 			i++;
 		}
 	}

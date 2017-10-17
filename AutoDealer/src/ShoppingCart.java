@@ -13,9 +13,13 @@ public class ShoppingCart {
 		return this.vehicles;
 	}
 
-	public void addVehicle(Vehicle car, int quantity) {
-		this.vehicles[this.numberOfCars] = car.clone(quantity);
-		this.numberOfCars++;
+	public boolean addVehicle(Vehicle car, int quantity) {
+		if (car.removeQty(quantity)) { 
+		   this.vehicles[this.numberOfCars] = car.clone(quantity);
+		   this.numberOfCars++;
+		   return true;
+		}
+		return false;
 	}
 
 	public float BalanceDue() {

@@ -39,4 +39,12 @@ public class Vehicle {
 		return new Vehicle(this.make, this.model, this.doors, this.price, quantity);
 	}
 
+	public boolean removeQty(int quantityToRemove) {
+		if (this.quantity >= quantityToRemove) {
+			this.quantity -= quantityToRemove;
+			return true;
+		}
+		return false;
+	}
+
 }
