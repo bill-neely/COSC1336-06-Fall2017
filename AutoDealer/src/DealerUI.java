@@ -2,9 +2,12 @@ import java.util.Scanner;
 
 public class DealerUI {
 
+	private static Scanner scan = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		//Scanner scan = new Scanner(System.in);
 		Dealership myDealer = Repository.getDealership();
+		// create an askString() method
 		System.out.println("Welcome to " + myDealer.dealerName + ". What is your name?");
 		String customerName = scan.nextLine();
 		System.out.println("Hello " + customerName + ".  Enjoy your shopping experience");
@@ -23,11 +26,8 @@ public class DealerUI {
 					System.out.println("Please pick a vehicle");
 					String vehicleID = scan.nextLine();
 					if (validChoice(vehicleID, chosenLot.VehicleList().length)) {
-						System.out.println("How many do you want?");
-						String purchaseQty = scan.nextLine();
 						int vehicleNum = Integer.parseInt(vehicleID) - 1;
-						int qty = Integer.parseInt(purchaseQty);
-						// If here to check Vehicle quantity is availble
+						int qty = askForInt("How many do you want?");
 						if (!myCart.addVehicle(chosenLot.VehicleList()[vehicleNum], qty)) {
 							System.out.println("I'm sorry, we don't have that many.");
 						}
@@ -40,6 +40,13 @@ public class DealerUI {
 		}
 		System.out.println("Your balance is: " + myCart.BalanceDue());
 		System.out.println("Thank for shopping, " + customerName + ". Please come again.");
+		scan.close();
+	}
+	
+	private static int askForInt(String prompt) {
+		System.out.println(prompt);
+		String answer = scan.nextLine();
+		return Integer.parseInt(answer);
 	}
 	
 	private static boolean validChoice(String lotNumber, int upperLimit) {
