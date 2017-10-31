@@ -7,6 +7,7 @@ public class PalindromeExercise {
 		System.out.println(isPalindrome("racecar") == true);
 		System.out.println(isPalindrome("Was it a CAR or a CAT I saw") == true);
 		System.out.println(isPalindrome("Java") == false);
+		System.out.println("Hello");
 	}
 
 	private static String stripBlanks(String phrase) {
