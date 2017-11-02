@@ -12,6 +12,10 @@ public class Ticket {
 		} while(Utility.isUnique(this.numbers) == false);
 	}
 	
+	public Ticket(int[] numbers) {
+		this.numbers = numbers;
+	}
+	
 	public int[] numbers() {
 		return this.numbers;
 	}
