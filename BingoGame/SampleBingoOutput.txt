@@ -1,0 +1,316 @@
+How many Bingo cards do you want to play?
+40
+
+Here are all the drawn balls
+B	I	N	G	O
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: O-74
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: B-1
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: B-5
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+05	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: I-22
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+05	--	--	--	--
+--	--	--	--	--
+--	22	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: I-20
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+05	20	--	--	--
+--	--	--	--	--
+--	22	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: B-8
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+05	20	--	--	--
+--	--	--	--	--
+--	22	--	--	--
+08	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: O-68
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+05	20	--	--	--
+--	--	--	--	--
+--	22	--	--	--
+08	--	--	--	68
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: O-61
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	61
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+05	20	--	--	--
+--	--	--	--	--
+--	22	--	--	--
+08	--	--	--	68
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: O-63
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	61
+--	--	--	--	--
+--	--	--	--	63
+--	--	--	--	--
+05	20	--	--	--
+--	--	--	--	--
+--	22	--	--	--
+08	--	--	--	68
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: B-12
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	61
+--	--	--	--	--
+--	--	--	--	63
+--	--	--	--	--
+05	20	--	--	--
+--	--	--	--	--
+--	22	--	--	--
+08	--	--	--	68
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+12	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: O-67
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	61
+--	--	--	--	--
+--	--	--	--	63
+--	--	--	--	--
+05	20	--	--	--
+--	--	--	--	--
+--	22	--	--	67
+08	--	--	--	68
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+12	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: G-49
+No winners yet out of 40 cards
+
+Here are all the drawn balls
+B	I	N	G	O
+01	--	--	--	61
+--	--	--	--	--
+--	--	--	--	63
+--	--	--	49	--
+05	20	--	--	--
+--	--	--	--	--
+--	22	--	--	67
+08	--	--	--	68
+--	--	--	--	--
+--	--	--	--	--
+--	--	--	--	--
+12	--	--	--	--
+--	--	--	--	--
+--	--	--	--	74
+--	--	--	--	--
+
+Press Enter to draw the next Ball
+
+The last ball drawn was: G-54
+
+BINGO!  We have 1 winners.
+This card won by: 5 Across Row 3
+
+Here is a winning card
+ B    I    N    G    O
+ 11   19   39   59   65
+(08)  16   45  (49)  62
+(05) (22) Free (54) (67)
+ 04   26   41   53   66
+(01)  24   37   52   70
+
+
+Play Again (Y/N)?
+n
+Thank you for playing
