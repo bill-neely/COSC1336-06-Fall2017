@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Utility {
-
+	
 	public static int askForInt(Scanner scan, String prompt) {
 		do {
 			try {
@@ -17,12 +17,12 @@ public class Utility {
 	public static int askForInt(Scanner scan, String prompt, int min) {
 		while (true) {
 			int number = askForInt(scan, prompt);
-			if (number >= min)
+			if (number >= min) 
 				return number;
 			System.out.println("Minimum allowed is " + min);
 		}
 	}
-
+	
 	public static String askForString(Scanner scan, String prompt) {
 		System.out.println(prompt);
 		String answer = scan.nextLine();
@@ -46,8 +46,8 @@ public class Utility {
 		do {
 			for (int i = 0; i < numbers.length; i++)
 				numbers[i] = randBetween(lower, upper);
-		} while (!Utility.isUnique(numbers));
+		} while (!Utility.isUnique(numbers));	
 		return numbers;
 	}
-
+	
 }

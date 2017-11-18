@@ -63,7 +63,7 @@ public class BingoUI {
 			formatMasterBoardNumber(theGame.masterBoard()[i+45]);
 			formatMasterBoardNumber(theGame.masterBoard()[i+60]);
 			System.out.println();
-		}
+		}		
 		System.out.println();
 	}
 
@@ -76,7 +76,7 @@ public class BingoUI {
 
 
 	private static String formatCardNumber(int number, boolean isBallDrawn) {
-		if (number == -1)
+		if (number == -1) 
 			return "Free ";
 		String formattedNumber = (new DecimalFormat("00").format(number));
 		if (isBallDrawn)
@@ -86,7 +86,7 @@ public class BingoUI {
 
 
 	private static void formatMasterBoardNumber(int number) {
-		if (number == 0)
+		if (number == 0) 
 			System.out.print("--\t");
 		else
 			System.out.print((new DecimalFormat("00").format(number)) + "\t");
@@ -96,7 +96,7 @@ public class BingoUI {
 		int cardsToMake = Utility.askForInt(scan, "How many Bingo cards do you want to play?", 1);
 		return cardsToMake;
 	}
-
+	
 	private static boolean playAgain() {
 		System.out.println();
 		String again = Utility.askForString(scan, "Play Again (Y/N)?");

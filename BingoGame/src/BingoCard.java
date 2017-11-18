@@ -6,7 +6,7 @@ public class BingoCard {
 	final int[] NColumn;
 	final int[] GColumn;
 	final int[] OColumn;
-
+	
 	public BingoCard() {
 		BColumn = Utility.uniqueArrayInt(5, 1, 15);
 		IColumn = Utility.uniqueArrayInt(5, 16, 30);
@@ -15,5 +15,5 @@ public class BingoCard {
 		GColumn = Utility.uniqueArrayInt(5, 46, 60);
 		OColumn = Utility.uniqueArrayInt(5, 61, 75);
 	}
-
+	
 }
