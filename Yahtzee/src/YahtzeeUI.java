@@ -1,10 +1,33 @@
 import java.util.ArrayList;
 
-public class YahtzeUI {
+public class YahtzeeUI {
 
 	public static void main(String[] args) {
+		Yahtzee theGame = new Yahtzee();
+		int counter = 0;
+		while (theGame.isNotOver() && counter<5) {
+			counter++;
+		//    takeATurn()
+		//    show the score card
+		//    ask - ready to take another turn?
+		}
+		// displayFinalScore(theGame);
+		// if (!playAgain()) then quit
+	}
+
+	public static void takeATurn() {
+		// theGame.startTurnAndRollDice()
+		// showScoringOptions(theGame)
+		// showDice(theGame)
+		// if theGame.canRollAgain()
+		// 	choose a score or roll again
+		// else
+		//  choose a score
+	}
+	
+	public static void RollSomeDice() {
 		ArrayList<Die> myDice = new ArrayList<Die>(); 
-		myDice = getDice(6);
+		myDice = getDice(5);
 		printOut(myDice);
 	}
 
