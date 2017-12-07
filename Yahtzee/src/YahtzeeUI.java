@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class YahtzeeUI {
@@ -17,13 +16,24 @@ public class YahtzeeUI {
 		scan.close();
 	}
 
-	private static boolean playAgain() {
-		String choice = askForString("Play Again Y/N?");
-		return choice.toUpperCase().equals("Y");
+	private static void askEliminateOrPickScore(Yahtzee theGame) {
+		String choice = askForString("    (P)ick a score, (R)oll Again");
+		if (choice.toUpperCase().equals("P"))
+			pickAScore(theGame);
+		else
+			eliminateDice(theGame);
 	}
 
-	private static void displayFinalScore(Yahtzee theGame) {
-		System.out.println("This is your final score!");
+	private static int askForInt(String prompt) {
+		while (true) {
+			try {
+				String choice = askForString(prompt);
+				int answer = Integer.parseInt(choice);
+				return answer;
+			} catch (NumberFormatException ex) {
+				System.out.println("Please enter a valid number");
+			}
+		}
 	}
 
 	private static String askForString(String prompt) {
@@ -39,25 +49,9 @@ public class YahtzeeUI {
 		System.out.println();
 	}
 
-	private static void pickAScore(Yahtzee theGame) {
-		theGame.pickScore();
-		String choice = askForString("   Choose a Row To Score");
-		int row = Integer.parseInt(choice) - 1;
-		theGame.scoreCard().rows(theGame.Dice())[row].recordScore();
-	}
-
-	public static void takeATurn(Yahtzee theGame) {
-		System.out.println("Start a Turn " + theGame.turnsLeft() + " turns left.");
-		theGame.startATurn();
-		while (theGame.inATurn()) {
-			displayScoreCard(theGame);
-			displayDice(theGame);
-			if (theGame.rollsLeft() > 0) {
-				System.out.println(theGame.rollsLeft() + " rolls left.");
-				askEliminateOrPickScore(theGame);
-			} else 
-				pickAScore(theGame);
-		}
+	private static void displayFinalScore(Yahtzee theGame) {
+		displayScoreCard(theGame);
+		System.out.println("Final Score: " + theGame.scoreCard().finalScore());
 	}
 
 	private static void displayScoreCard(Yahtzee theGame) {
@@ -69,18 +63,10 @@ public class YahtzeeUI {
 			} else {
 				System.out.print((i+1) + ". ");
 				System.out.print(theGame.scoreCard().rows(theGame.Dice())[i].label + "\t");
-				System.out.println("(" + theGame.scoreCard().rows(theGame.Dice())[i].score() + ")");			
+				System.out.println("(" + theGame.scoreCard().rows(theGame.Dice())[i].score() + ")");
 			}
 		}
 
-	}
-
-	private static void askEliminateOrPickScore(Yahtzee theGame) {
-		String choice = askForString("    (P)ick a score, (R)oll Again");
-		if (choice.toUpperCase().equals("P"))
-			pickAScore(theGame);
-		else 
-			eliminateDice(theGame);
 	}
 
 	private static void eliminateDice(Yahtzee theGame) {
@@ -88,7 +74,7 @@ public class YahtzeeUI {
 		boolean keepGoing = true;
 		while (keepGoing) {
 			String choice = askForString("      (1-" + theGame.Dice().size() + ") to throw away, (R)oll");
-			if (choice.toUpperCase().equals("R")) { 
+			if (choice.toUpperCase().equals("R")) {
 				theGame.rollAgain();
 				keepGoing = false;
 			} else {
@@ -96,31 +82,37 @@ public class YahtzeeUI {
 				if (theGame.Dice().size() == 0) {
 					theGame.rollAgain();
 					keepGoing = false;
-				} else 
+				} else
 					displayDice(theGame);
 			}
 		}
 	}
 
-	public static void RollSomeDice() {
-		ArrayList<Die> myDice = new ArrayList<Die>(); 
-		myDice = getDice(5);
-		printOut(myDice);
+	private static void pickAScore(Yahtzee theGame) {
+		int row;
+		do {
+			row = askForInt("   Choose a Row To Score");
+			row -= 1;
+		} while (theGame.scoreCard().rows(theGame.Dice())[row].isScored());
+		theGame.pickScore(row);
 	}
 
-	private static ArrayList<Die> getDice(int numberToMake) {
-		ArrayList<Die> myDice = new ArrayList<Die>();
-		for (int i = 0; i < numberToMake; i++) {
-			myDice.add(new Die());
-		}
-		return myDice;
+	private static boolean playAgain() {
+		String choice = askForString("Play Again Y/N?");
+		return choice.toUpperCase().equals("Y");
 	}
 
-	public static void printOut(ArrayList<Die> myList) {
-		System.out.println("");
-		System.out.println("List has size of: " + myList.size());  
-		for (Die element : myList) {
-			System.out.println("  " + element.sideUp);
+	public static void takeATurn(Yahtzee theGame) {
+		System.out.println("Start a Turn " + theGame.turnsLeft() + " turns left.");
+		theGame.startATurn();
+		while (theGame.inATurn()) {
+			displayScoreCard(theGame);
+			displayDice(theGame);
+			if (theGame.rollsLeft() > 0) {
+				System.out.println(theGame.rollsLeft() + " rolls left.");
+				askEliminateOrPickScore(theGame);
+			} else
+				pickAScore(theGame);
 		}
 	}
 }
